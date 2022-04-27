@@ -1,6 +1,6 @@
 # This is a basic workflow to automatically build a Svelte app and deploy it to GitHub Pages
 
-name: Deploy to Oracle Cloud
+name: Deploy app to Oracle Cloud
 
 on:
   push:
