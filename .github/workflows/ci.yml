@@ -1,17 +1,19 @@
-name: Deployment
+# This is a basic workflow to automatically build a Svelte app and deploy it to GitHub Pages
+
+name: Deploy to Oracle Cloud
 
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Download project from git
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Build project
+      - name: Install and Build
         run: |
-          yarn
-          yarn generate
+          npm install
+          npm run build
