@@ -1,4 +1,4 @@
-name: Project Deployement
+name: Project Deployment
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
 
 jobs:
   build:
-		runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Download project from git       
+      - name: Download project from git
         uses: actions/checkout@v2
 
       - name: Build project
         run: |
           npm install
-          npm run build  
+          npm run build
