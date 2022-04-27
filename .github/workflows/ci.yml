@@ -10,3 +10,8 @@ jobs:
     steps:
       - name: Download project from git
         uses: actions/checkout@v2
+
+      - name: Build project
+        run: |
+          yarn
+          yarn generate
