@@ -21,7 +21,9 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: bundle
-          path: ./dist
+          path: |
+            ./build
+            ./package.json
 
   deploy:
     runs-on: ubuntu-latest
