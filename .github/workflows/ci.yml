@@ -61,9 +61,12 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
           script: |
             cd www/temp/${{ github.event.repository.name }}
-            npm ci --production
-            cp -R ./build ./node_modules ./package.json ../../${{ github.event.repository.name }}
+            # npm ci --prod
+            npm install
+            rm svelte.config.js package-lock.json
             cd ..
+            cp -R ${{ github.event.repository.name }} ~/www                        
             rm -R *
