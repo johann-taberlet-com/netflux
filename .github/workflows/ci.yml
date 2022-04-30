@@ -64,6 +64,6 @@ jobs:
           script: |
             cd www/temp/${{ github.event.repository.name }}
             npm ci --production
-            cp -R * ../../${{ github.event.repository.name }}
+            cp -R ./build ./node_modules ./package.json ../../${{ github.event.repository.name }}
             cd ..
             rm -R *
