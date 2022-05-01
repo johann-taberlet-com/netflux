@@ -8,3 +8,8 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+interface ImportMetaEnv {
+	VITE_TMDB_API: string;
+	VITE_TMDB_API_TOKEN: string;
+}
