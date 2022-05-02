@@ -16,11 +16,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script_stop: true
           script: |
-            cd ~/www/temp_builder/${{ github.event.repository.name }}/clone
-            ls
-            # git clone ${{ github.event.repository.clone_url }}
-            # mv ./* ../
-            # cd ..
+            cd ~/www/temp_builder/${{ github.event.repository.name }}/clone            
+            git clone ${{ github.event.repository.clone_url }}
+            mv ./* ../
+            cd ..
+            ls -a
             # npm i
             # npm run build
             # mv build package.json node_modules ~/www/netflux/
