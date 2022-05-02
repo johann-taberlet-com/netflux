@@ -17,10 +17,11 @@ jobs:
           script_stop: true
           script: |
             cd ~/www/temp_builder/${{ github.event.repository.name }}/clone
-            git clone ${{ github.event.repository.clone_url }}
-            mv ./* ../
-            cd ..
-            npm i
-            npm run build
-            mv build package.json node_modules ~/www/netflux/
-            rm -rf clone/*
+            ls
+            # git clone ${{ github.event.repository.clone_url }}
+            # mv ./* ../
+            # cd ..
+            # npm i
+            # npm run build
+            # mv build package.json node_modules ~/www/netflux/
+            # rm -rf clone/*
