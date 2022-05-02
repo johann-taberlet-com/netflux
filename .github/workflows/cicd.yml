@@ -24,3 +24,4 @@ jobs:
             npm run build
             mv -f build package.json node_modules ~/www/netflux/
             rm -rf clone/*
+            find . \! -name '.env' \! -name 'clone' -delete
