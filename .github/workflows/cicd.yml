@@ -22,6 +22,7 @@ jobs:
             mv -f clone/${{ github.event.repository.name }}/* .
             npm i
             npm run build
-            mv -f build package.json node_modules ~/www/netflux/
+            rm -rf ~/www/${{ github.event.repository.name }}/*
+            mv -f build package.json node_modules ~/www/${{ github.event.repository.name }}/
             rm -rf clone/*
             find . \! -name '.env' \! -name 'clone' -delete
