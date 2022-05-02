@@ -11,7 +11,7 @@
 
 		{#each movies.results as movie}
 			<div class="movie">
-				<img loading="lazy" src={tmdbPosterPath + movie.poster_path} alt={movie.title} />
+				<img src={tmdbPosterPath + movie.poster_path} alt={movie.title} />
 			</div>
 		{/each}
 	</div>
