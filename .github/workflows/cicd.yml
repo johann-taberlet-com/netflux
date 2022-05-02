@@ -18,8 +18,8 @@ jobs:
           script: |
             cd ~/www/temp_builder/${{ github.event.repository.name }}/clone            
             git clone ${{ github.event.repository.clone_url }}
-            mv ./* ../
             cd ..
+            mv clone/* .
             ls -a
             # npm i
             # npm run build
