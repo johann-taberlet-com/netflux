@@ -1,4 +1,4 @@
-import { getPopularMovies } from '$lib/api/tmdb/api';
+import { getPopularMovies } from '$lib/api/tmdb';
 
 export async function get() {
 	// Get Popular Movies

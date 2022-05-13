@@ -17,4 +17,4 @@ export const getPopularMovies = async (
 	return results;
 };
 
-export * as TmdbApi from './api';
+export * as TmdbApi from './index';
